@@ -1,8 +1,5 @@
-if exists curl; then
-	echo ''
-else
   sudo apt install curl -y < "/dev/null"
-fi
+
 curl -s https://github.com/cryptocaju/infodata/logocaju.sh | bash
 echo "==================================================="
 sleep 2
