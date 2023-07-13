@@ -53,8 +53,6 @@ PIP_REQUIRE_VIRTUALENV=true pip install -r requirements-dev.txt
 
 cargo build --release --bin pathfinder
 
-screen -S py
-
 echo "============================ENTRE COM O ENDERECO DA CARTEIRA ALCHEMY E APERTE ENTER=================================================="
 read endereco
 
