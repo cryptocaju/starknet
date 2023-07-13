@@ -58,4 +58,4 @@ read endereco
 
 
 echo "==============================================RRRRRODANDO ROCKE======================================================================"
-cargo run --release --bin pathfinder -- --ethereum.url "$endereco" &
+cargo run --release --bin pathfinder -- --ethereum.url $endereco &
