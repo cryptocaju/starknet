@@ -36,26 +36,3 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 
 rustup update stable --force
-
-git clone --branch v0.4.0 https://github.com/eqlabs/pathfinder.git
-
-sudo apt install python3.8-venv
-
-cd pathfinder/py
-
-python3 -m venv .venv
-
-source .venv/bin/activate
-
-PIP_REQUIRE_VIRTUALENV=true pip install --upgrade pip
-
-PIP_REQUIRE_VIRTUALENV=true pip install -r requirements-dev.txt
-
-cargo build --release --bin pathfinder
-
-echo "============================ENTRE COM O ENDERECO DA CARTEIRA ALCHEMY E APERTE ENTER=================================================="
-read endereco
-
-
-echo "==============================================RRRRRODANDO ROCKE======================================================================"
-cargo run --release --bin pathfinder -- --ethereum.url $endereco &
